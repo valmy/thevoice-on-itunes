@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Voice on iTunes - U.S.A</title>
+    <link href="static/bootstrap.css/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">The Voice on iTunes</a>
+          <ul class="nav">
+            <li class="active"><a href="/">U.S.A.</a></li>
+            <li><a href="/aus">Australia</a></li>
+          </ul>
+        </div>
+      </div>
+      {% for result in results %}
+      <div class="row-fluid">
+        <div class="span4">
+          {{ result.no }}
+        </div>
+        <div class="span4">
+          {{ result.artist }}
+        </div>
+        <div class="span4">
+          {{ result.song }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="static/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,9 @@
+{
+  "name": "thevoice-on-itunes",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "*",
+    "bootstrap.css": "*",
+    "jquery": "*"
+  }
+}

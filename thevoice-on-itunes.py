@@ -42,7 +42,7 @@ def entries_by_date(country, date):
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
-        today = date=datetime.date(2013, 5, 22)
+        today = datetime.date.today() - datetime.timedelta(days=1)
 
         (day_chart, entries) = entries_by_date('us', today)
 
@@ -54,7 +54,7 @@ class MainPage(webapp2.RequestHandler):
 class UsaDatePage(webapp2.RequestHandler):
 
     def get(self, year, month, day):
-        today = date=datetime.date(int(year), int(month), int(day))
+        today = datetime.date(int(year), int(month), int(day))
 
         (day_chart, entries) = entries_by_date('us', today)
 
@@ -65,7 +65,7 @@ class UsaDatePage(webapp2.RequestHandler):
 class AustralianPage(webapp2.RequestHandler):
 
     def get(self):
-        today = date=datetime.date(2013, 5, 22)
+        today = datetime.date.today() - datetime.timedelta(days=1)
 
         (day_chart, entries) = entries_by_date('aus', today)
 
@@ -76,7 +76,7 @@ class AustralianPage(webapp2.RequestHandler):
 class AustralianDatePage(webapp2.RequestHandler):
 
     def get(self, year, month, day):
-        today = date=datetime.date(int(year), int(month), int(day))
+        today = datetime.date(int(year), int(month), int(day))
 
         (day_chart, entries) = entries_by_date('aus', today)
 

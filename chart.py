@@ -38,7 +38,7 @@ class Chart(object):
                 artist = artist_tag.get_text().strip()
                 song = song_tag.get_text().strip()
                 song = song[:-len(self.song_name)].strip()
-                results.append({ 'no': no,
+                results.append({ 'rank': no,
                         'artist': artist,
                         'song': song })
         return results

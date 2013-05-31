@@ -25,6 +25,8 @@ class Chart(object):
     def read(self, date_str):
 
         res = requests.get(self.url + date_str)
+        if not res:
+            return None
         chart = SoupStrainer(id='chart')
         soup = BeautifulSoup(res.text, parse_only=chart)
         entries = soup.find_all('li')
